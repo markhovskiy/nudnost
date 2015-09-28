@@ -1,6 +1,14 @@
-# nudnost
+# gnb-scales
 
 CLI utility to draw guitar/bass scales
+
+
+```
+|--o-o-o--
+|--o-o-o--
+|--o-oo---
+|--o-oo---
+```
 
 
 ## features/todo
