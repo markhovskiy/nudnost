@@ -1,5 +1,7 @@
 # gnb-scales
 
+[![Build Status](https://travis-ci.org/oleksmarkh/gnb-scales.svg)](https://travis-ci.org/oleksmarkh/gnb-scales)
+
 CLI utility to draw guitar/bass scales
 
 
@@ -9,6 +11,11 @@ CLI utility to draw guitar/bass scales
 |--o-oo---
 |--o-oo---
 ```
+
+## setup
+
+1. `mkvirtualenv --python=/usr/bin/python3 gnb-scales`
+2. `pip install -r requirements.txt`
 
 
 ## features/todo

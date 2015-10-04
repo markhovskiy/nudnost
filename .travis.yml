@@ -1,0 +1,12 @@
+sudo: false
+
+language: python
+python:
+    - "3.4"
+
+install:
+    - pip install -r requirements.txt
+
+script:
+    - pep8 --show-source .
+    # - py.test utils/tests/
