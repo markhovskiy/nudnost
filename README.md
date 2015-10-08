@@ -6,10 +6,12 @@ CLI utility to draw guitar/bass scales
 
 
 ```
-|--o-o-o--
-|--o-o-o--
-|--o-oo---
-|--o-oo---
+|··○●·○···
+|···○·○···
+|··○·○○···
+|··○·○●···
+|··○○·○···
+|··○●·○···
 ```
 
 ## setup
@@ -20,7 +22,6 @@ CLI utility to draw guitar/bass scales
 
 ## features/todo
 
-- [ ] "simple mode" - just draw notes in a symbol notation, e.g. `A-B-C♯-D-E-F♯-G♯` representing "A major"
 - [ ] ability to create/edit/show scales on both note and tab staves
 - [ ] choose number of strings
 - [ ] select different keys
