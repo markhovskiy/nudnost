@@ -12,6 +12,11 @@ class Scale:
              'B♭',
              'B']  # Si
 
+    matrix = [('D', 'E♭', 'E', 'F', 'G♭'),
+              ('A', 'B♭', 'B', 'C', 'D♭'),
+              ('E', 'F', 'G♭', 'G', 'A♭'),
+              ('B', 'C', 'D♭', 'D', 'E♭')]
+
     scales = {'major': ['C', 'D', 'E', 'F', 'G', 'A', 'B'],
               'minor': ['C', 'D', 'E♭', 'F', 'G', 'A♭', 'B♭']}
 
@@ -21,7 +26,19 @@ class Scale:
         self.strings = strings or {'bass': 4, 'guitar': 6}.get(fretboard)
 
     def render(self):
-        print(" ".join(Scale.scales[self.scale]))
+        scale_notes = self.scales[self.scale]
+        print(" ".join(scale_notes))
 
-        # print("\n".join(["|··{}{}{}{}{}··".format('·', '·', '·', '·', '·')
-        #                  for _ in range(0, self.strings)]))
+        for line in self.matrix:
+            print("|··", end='')
+
+            [print(self._get_note_symbol(note, scale_notes), end='')
+             for note in line]
+
+            print("·")
+
+    def _get_note_symbol(self, note, scale_notes):
+        if note not in scale_notes:
+            return "·"
+
+        return "●" if note == 'C' else '○'
