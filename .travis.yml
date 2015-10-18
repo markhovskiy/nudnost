@@ -9,4 +9,4 @@ install:
 
 script:
     - pep8 --show-source .
-    # - py.test utils/tests/
+    - py.test utils/tests/

@@ -1,3 +1,6 @@
+from collections import OrderedDict
+
+
 class Scale:
     notes = ['C',  # Do
              'D♭',
@@ -12,32 +15,36 @@ class Scale:
              'B♭',
              'B']  # Si
 
-    matrix = [('D', 'E♭', 'E', 'F', 'G♭'),
-              ('A', 'B♭', 'B', 'C', 'D♭'),
-              ('E', 'F', 'G♭', 'G', 'A♭'),
-              ('B', 'C', 'D♭', 'D', 'E♭')]
+    matrices = {'guitar': OrderedDict([('1E', ('B', 'C', 'D♭', 'D', 'E♭')),
+                                       ('2B', ('G♭', 'G', 'A♭', 'A', 'B♭')),
+                                       ('3G', ('D', 'E♭', 'E', 'F', 'G♭')),
+                                       ('4D', ('A', 'B♭', 'B', 'C', 'D♭')),
+                                       ('5A', ('E', 'F', 'G♭', 'G', 'A♭')),
+                                       ('6E', ('B', 'C', 'D♭', 'D', 'E♭')),
+                                       ('7B', ('G♭', 'G', 'A♭', 'A', 'B♭'))]),
+                'bass': OrderedDict([('0C', ('G♭', 'G', 'A', 'B♭', 'B')),
+                                     ('1G', ('D', 'E♭', 'E', 'F', 'G♭')),
+                                     ('2D', ('A', 'B♭', 'B', 'C', 'D♭')),
+                                     ('3A', ('E', 'F', 'G♭', 'G', 'A♭')),
+                                     ('4E', ('B', 'C', 'D♭', 'D', 'E♭')),
+                                     ('5B', ('G♭', 'G', 'A♭', 'A', 'B♭'))])}
 
     scales = {'major': ['C', 'D', 'E', 'F', 'G', 'A', 'B'],
               'minor': ['C', 'D', 'E♭', 'F', 'G', 'A♭', 'B♭']}
 
-    def __init__(self, scale, fretboard, strings=None):
-        self.scale = scale
-        self.fretboard = fretboard
-        self.strings = strings or {'bass': 4, 'guitar': 6}.get(fretboard)
+    @classmethod
+    def render(cls, scale, fretboard):
+        scale_notes = cls.scales[scale]
 
-    def render(self):
-        scale_notes = self.scales[self.scale]
         print(" ".join(scale_notes))
 
-        for line in self.matrix:
-            print("|··", end='')
+        [print("{0}|~··{1}·".format(open_note,
+                                    "".join([cls._get_note_symbol(note, scale_notes)
+                                             for note in line])))
+         for open_note, line in cls.matrices[fretboard].items()]
 
-            [print(self._get_note_symbol(note, scale_notes), end='')
-             for note in line]
-
-            print("·")
-
-    def _get_note_symbol(self, note, scale_notes):
+    @classmethod
+    def _get_note_symbol(cls, note, scale_notes):
         if note not in scale_notes:
             return "·"
 

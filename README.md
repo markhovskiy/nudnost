@@ -5,27 +5,24 @@
 CLI utility to draw guitar/bass scales
 
 
+## usage
+
+```bash
+render-scale.py [-h] {major,minor} {bass,guitar}
 ```
-|··○●·○···
-|···○·○···
-|··○·○○···
-|··○·○●···
-|··○○·○···
-|··○●·○···
+
+```
+C D E F G A B       C D E♭ F G A♭ B♭
+1E|~··○●·○··        0C|~···○·○··
+2B|~···○·○··        1G|~··○○·○··
+3G|~··○·○○··        2D|~···○·●··
+4D|~··○·○●··        3A|~···○·○○·
+5A|~··○○·○··        4E|~···●·○○·
+6E|~··○●·○··        5B|~···○○·○·
+7B|~···○·○··
 ```
 
 ## setup
 
 1. `mkvirtualenv --python=/usr/bin/python3 gnb-scales`
 2. `pip install -r requirements.txt`
-
-
-## features/todo
-
-- [ ] ability to create/edit/show scales on both note and tab staves
-- [ ] choose number of strings
-- [ ] select different keys
-- [ ] "play/metronom mode" - sequential highlighting together with sound replication
-- [ ] "comparison mode" - to comprehend a difference between, let's say melodic and harmonic minor scales
-- [ ] "training mode" - repetative tempo increase
-- [ ] some gamification, e.g. scores for each scale mastered :)
