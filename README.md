@@ -7,7 +7,7 @@ CLI utility to draw guitar/bass scales.
 ## usage
 
 ```bash
-$ render-scale.py [-h] {major,minor} {bass,guitar}
+$ python render-scale.py [-h] {major,minor} {bass,guitar}
 ```
 
 ```
@@ -27,7 +27,7 @@ C D E F G A B       C D E♭ F G A♭ B♭
 ## setup
 
 ```bash
-$ mkvirtualenv --python=/usr/bin/python3 gnb-scales
+$ mkvirtualenv --python=/usr/local/bin/python3 gnb-scales
 $ pip install -r requirements.txt
 ```
 

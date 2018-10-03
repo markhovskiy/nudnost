@@ -7,7 +7,8 @@ def test_render_major_guitar(capsys):
 
     out, _ = capsys.readouterr()
 
-    assert out == ("C D E F G A B\n"
+    assert out == ("(major, guitar)\n\n"
+                   "C D E F G A B\n\n"
                    "1E|~··○●·○··\n"
                    "2B|~···○·○··\n"
                    "3G|~··○·○○··\n"
@@ -23,7 +24,8 @@ def test_render_minor_guitar(capsys):
 
     out, _ = capsys.readouterr()
 
-    assert out == ("C D E♭ F G A♭ B♭\n"
+    assert out == ("(minor, guitar)\n\n"
+                   "C D E♭ F G A♭ B♭\n\n"
                    "1E|~···●·○○·\n"
                    "2B|~···○○·○·\n"
                    "3G|~··○○·○··\n"
@@ -39,7 +41,8 @@ def test_render_major_bass(capsys):
 
     out, _ = capsys.readouterr()
 
-    assert out == ("C D E F G A B\n"
+    assert out == ("(major, bass)\n\n"
+                   "C D E F G A B\n\n"
                    "0C|~···○○·○·\n"
                    "1G|~··○·○○··\n"
                    "2D|~··○·○●··\n"
@@ -54,7 +57,8 @@ def test_render_minor_bass(capsys):
 
     out, _ = capsys.readouterr()
 
-    assert out == ("C D E♭ F G A♭ B♭\n"
+    assert out == ("(minor, bass)\n\n"
+                   "C D E♭ F G A♭ B♭\n\n"
                    "0C|~···○·○··\n"
                    "1G|~··○○·○··\n"
                    "2D|~···○·●··\n"

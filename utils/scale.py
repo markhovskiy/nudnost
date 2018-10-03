@@ -36,7 +36,8 @@ class Scale:
     def render(cls, scale, fretboard):
         scale_notes = cls.scales[scale]
 
-        print(" ".join(scale_notes))
+        print("({0}, {1})\n".format(scale, fretboard))
+        print("{0}\n".format(" ".join(scale_notes)))
 
         [print("{0}|~··{1}·".format(open_note,
                                     "".join([cls._get_note_symbol(note, scale_notes)
