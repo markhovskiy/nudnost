@@ -11,7 +11,8 @@ $ render-scale.py [-h] {major,minor} {bass,guitar}
 ```
 
 ```
-major, guitar       minor, bass
+(major, guitar)     (minor, bass)
+
 C D E F G A B       C D E♭ F G A♭ B♭
 
 1E|~··○●·○··        0C|~···○·○··
@@ -29,3 +30,8 @@ C D E F G A B       C D E♭ F G A♭ B♭
 $ mkvirtualenv --python=/usr/bin/python3 gnb-scales
 $ pip install -r requirements.txt
 ```
+
+## see
+
+* https://www.guitarcommand.com/guitar-scales and https://www.guitarcommand.com/guitar-scales/bass-scales
+* http://www.angelfire.com/id/bass (so 1998 but lots of examples)
