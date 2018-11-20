@@ -1,6 +1,8 @@
 # gnb-scales
 
-[![Build Status](https://travis-ci.org/oleksmarkh/gnb-scales.svg)](https://travis-ci.org/oleksmarkh/gnb-scales)
+  [![travis][travis-image]][travis-url]
+  [![license][license-image]][license-url]
+  ![code size][code-size-image]
 
 CLI utility to draw guitar/bass scales.
 
@@ -35,3 +37,9 @@ $ pip install -r requirements.txt
 
 * https://www.guitarcommand.com/guitar-scales and https://www.guitarcommand.com/guitar-scales/bass-scales
 * http://www.angelfire.com/id/bass (so 1998 but lots of examples)
+
+[travis-image]: https://img.shields.io/travis/oleksmarkh/gnb-scales/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/oleksmarkh/gnb-scales
+[license-image]: https://img.shields.io/github/license/oleksmarkh/gnb-scales.svg?style=flat-square
+[license-url]: https://github.com/oleksmarkh/gnb-scales/blob/master/LICENSE
+[code-size-image]: https://img.shields.io/github/languages/code-size/oleksmarkh/gnb-scales.svg?style=flat-square
