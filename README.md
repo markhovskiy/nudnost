@@ -7,7 +7,7 @@ CLI utility to draw guitar/bass scales.
 
 ## Status
 
-*Experimental* - only 2 scales are supported.
+*On hold* - only 2 scales are hardcoded.
 
 ## How does it look like?
 
@@ -42,8 +42,7 @@ $ py.test utils/tests/
 
 ## Resources
 
-* https://www.guitarcommand.com/guitar-scales and https://www.guitarcommand.com/guitar-scales/bass-scales
-* http://www.angelfire.com/id/bass (so 1998 but lots of examples)
+* GuitarCommand: [guitar](https://www.guitarcommand.com/guitar-scales/), [bass](https://www.guitarcommand.com/bass-scales/).
 
 [license-image]: https://img.shields.io/github/license/oleksmarkh/gnb-scales.svg?style=flat-square
 [license-url]: https://github.com/oleksmarkh/gnb-scales/blob/master/LICENSE
